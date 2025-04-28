@@ -1,0 +1,132 @@
+body {
+    background-color: black;
+}
+
+:root {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-font {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.co-font {
+    font-family: "Raleway", sans-serif;
+}
+
+.mid-font {
+    font-family: "Ubuntu", sans-serif;
+}
+
+body.light-mode {
+    --bg-color: white;
+    --text-color: black;
+}
+
+#theme-icon {
+    transition: transform 0.3s ease;
+}
+
+.card {
+    z-index: -1;
+}
+
+.navbar {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(50px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+.nav-link{
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    color: var(--text-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btna {
+    text-decoration: none;
+    color: white
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.section-1,
+.section-3,
+#contact,
+#faq {
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+}
+
+
+
+.section-2,
+#resume,
+.portfolio,
+.mode {
+    color: var(--text-color);
+}
+
+.banner {
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+    font-weight: bold;
+
+}
+
+.circle {
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+}
+
+.typing-cursor {
+    display: inline-block;
+    animation: blink 0.7s steps(1) infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
