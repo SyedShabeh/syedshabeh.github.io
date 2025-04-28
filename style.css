@@ -1,5 +1,7 @@
-body {
-    background-color: black;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -8,13 +10,14 @@ body {
 }
 
 body {
+    width: 100%;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .main-font {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .co-font {
@@ -37,6 +40,24 @@ body.light-mode {
 .card {
     z-index: -1;
 }
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 10px 10px;
+    cursor: pointer;
+    outline: none;
+    font-size: 27px; 
+    color: var(--text-color); 
+    transition: color 0.3s ease;
+}
+
+.icon-btn:hover {
+    background: none; /* No background on hover */
+    color: none /* Optional: change icon color slightly on hover */
+}
+
 
 .navbar {
     backdrop-filter: blur(20px);
@@ -69,6 +90,20 @@ body.light-mode {
 .nav-link:hover::after {
     width: 100%;
 }
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* When light mode active (black icon) */
+body.light-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler{
+    border-color: var(--text-color);
+}
+
 
 .btna {
     text-decoration: none;
