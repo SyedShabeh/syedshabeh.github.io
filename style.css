@@ -2,13 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden !important;
 }
+
 
 :root {
     --bg-color: #121212;
     --text-color: #f1f1f1;
+    
 }
+
+html, body {
+    overflow-x: clip;
+  }
+
 
 body {
     width: 100%;
