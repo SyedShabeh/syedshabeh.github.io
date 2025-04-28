@@ -1,1 +1,0 @@
-# syedshabeh.github.io
